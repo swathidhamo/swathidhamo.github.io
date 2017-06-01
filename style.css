@@ -1,0 +1,101 @@
+body{
+	/*background-color: #a1b1cc ;*/
+	font-family: 'Roboto Slab', serif;
+	
+	background: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+    
+}
+#page{
+	background-color: #edeff2 ;
+	/*border: 1px solid white;*/
+	border-radius: 1.65% 1.65% 1.65% 1.65%;
+	padding-left: 18px;
+	padding-right: 15px;
+	padding-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top:  15px;
+	padding-bottom: 30px;
+
+  }
+
+header{
+	background-color: #073170;
+	
+    padding-bottom: 5px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: #a1aab7;
+
+
+	/*text-shadow: 2px 2px #b7b4b3;*/
+    /*padding-left: 10px;
+    margin-left: 6px;
+    padding-top: 60px;
+    padding-bottom: 25px;
+    border-radius: 1.80% 1.80% 1.80% 1.80%;*/
+    
+}
+ #basic{
+ 	font-size: 18px;
+ 	text-decoration-color: #515863; 
+ 	padding-top: 20px;
+    padding-left: 10px;
+ }
+ #emoji{
+   height: 7px;
+   width: 7px;
+ }
+ #header{
+ 	font-size: 50px;
+ 	letter-spacing: 2px;
+ 	padding-left: 0.5em;
+ 	padding-top: 25px;
+ 	color: #a1aab7;
+
+ }
+ #date{
+ 	padding-left: 750px;
+ 	padding-top: 35px;
+ }
+#quote{
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+	font-style: italic;
+	border: 1px solid white;
+	background-color: #ccced1;
+	font-size: 1.5em;
+	margin-left: 30px;
+	margin-right: 100px;
+	border-radius: 1.85% 1.85% 1.85% 1.85%;
+   padding: 6px;
+	
+	
+
+}
+  figure p{
+  	font-style: italics;
+  	text-decoration: none;
+
+  }
+
+  
+
+#tech{
+	padding-top: 15px;
+}
+img{
+	height: 230px;
+	width: 200px;
+	}
+.img-responsive{
+    border:2px solid #fff; 
+  
+ -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  box-shadow: 10px 10px 5px #ccc; 
+ -moz-border-radius:25px;
+ -webkit-border-radius:25px;
+ border-radius:25px; 
+}
