@@ -1,0 +1,44 @@
+    body{
+     background-color: black;
+
+       }
+    canvas{
+    margin-left: 2%;    
+    border-color: black;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+       }
+    #canvas1{
+      padding-left: 30px;
+      padding-top: 30px;
+
+        }
+    #content{
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 30px;
+      background-color: white;
+        }
+    #score{
+      padding-left: 920px;
+      padding-top: 20px;
+        }
+    button{
+     
+      border-radius: 2px 2px 2px 2px;
+
+        }
+    #button{
+      background-color: #0ea33b;
+
+        }
+    #reset{
+      background-color: #4c61b2;
+        }
+    #title {
+    color: white;
+    text-shadow: 4px 4px 6px #000000;
+    font-size: 250%;
+    margin-left: 30%
+        }
