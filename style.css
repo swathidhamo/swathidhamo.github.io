@@ -38,7 +38,7 @@ header{
  	font-size: 18px;
  	text-decoration-color: #515863; 
  	padding-top: 20px;
-    padding-left: 10px;
+    padding-left: 20px;
    }
  #emoji{
    height: 7px;
@@ -52,8 +52,11 @@ header{
  	color: #a1aab7;
    }
  #date{
- 	padding-left: 750px;
- 	padding-top: 35px;
+ 	padding-top: 2.1em;
+ 	font-size: 17px;
+ 	padding-left: 20px;
+
+
   }
  #quote{
 
