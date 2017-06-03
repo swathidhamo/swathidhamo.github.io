@@ -68,7 +68,7 @@
      
 
      
-                 if((times+1)%9===0)
+                 if((times+1)%15===0)
                  {    
        
                      if((num1===num2) &&(num3===num2)&&(num1===num3)){
@@ -95,7 +95,7 @@
                      sc.clearRect(0,0,500,500);
                      number();
                      times++;
-                     if(times%9===0&&times!==0){
+                     if(times%15===0&&times!==0){
  
                           clearInterval(j);
                             }
@@ -103,7 +103,7 @@
 
                 }     
 
-      var j = setInterval(function(){box()},100);
+      var j = setInterval(function(){box()},200);
     
      
 
@@ -119,6 +119,10 @@
             sc.rect(10,10,60,60);
             sc.stroke(); 
               }
+          var stop = document.getElementById("stop");
+          stop.onclick = function(){
+            clearInterval(j);
+          }
      
     }
    
