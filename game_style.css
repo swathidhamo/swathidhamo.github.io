@@ -1,6 +1,7 @@
     body{
      background-color: black;
 
+
        }
     canvas{
     margin-left: 2%;    
@@ -36,9 +37,13 @@
     #reset{
       background-color: #4c61b2;
         }
+    #stop{
+      background-color: #bf1f0d;
+        }
     #title {
     color: white;
     text-shadow: 4px 4px 6px #000000;
     font-size: 250%;
     margin-left: 30%
         }
+       
