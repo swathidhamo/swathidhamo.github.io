@@ -128,10 +128,10 @@
      <li>And let's go back a few centuries.</li>
      <li>Do you think you could have survived if you had to fight with a bow.</li>
      <li>Let's find out now!</li>
-     <li>You have 9 Lives initially</li>
+     <li>You have 8 Lives initially</li>
      <li>Shooting at dead centre gives you 50 points, the next circle gives you 20 and the last one 10 points</li>
-     <li>Watch out for the brick, that means a penalty of 40 points</li>
-     <li>The 3 gives you three extra lives</li>
+     <li>Watch out for the brick, that means a penalty of 10 points</li>
+     <li>The 3 obstacle gives you three extra lives</li>
      <li>Don't forget to never harm animals!!</li>
      <li>Click start when you are ready ! </li>
      <li>Click once to pause and double click to resume</li>
@@ -534,6 +534,8 @@
           clearInterval(startGame);
           clearInterval(shotArrow);
           gameSound.stop();
+	  gameCount = 0;
+	  gameScore = 0;    
 
       });
 
