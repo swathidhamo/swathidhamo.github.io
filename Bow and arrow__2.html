@@ -482,8 +482,10 @@
        $("#stop").click(function(){
            clearInterval(startGame);
            clearInterval(shotArrow);
-           alert("You scored "+gameScore+ " points");
+          // alert("You scored "+gameScore+ " points");
            gameSound.stop();
+	   gameScore = 0;
+	   gameCount = 0;
         });
 
       $("#start").click(function(){
