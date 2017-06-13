@@ -1,8 +1,8 @@
 <html>
  <head>
 	<title>Arrow game</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style type="text/css">
       body{
        
@@ -114,7 +114,7 @@
  <body>
   <div>
     
-          <button id = "start" class = "depth" type = "button">Start</button>
+          <button id = "start" class = "depth">Start</button>
           <button id = "stop" class = "depth">Stop</button>
           <button id = "pause" class = "depth">Pause</button>
           <button id = "easy" class = "depth">Hard</button>
@@ -128,7 +128,7 @@
      <li>And let's go back a few centuries.</li>
      <li>Do you think you could have survived if you had to fight with a bow.</li>
      <li>Let's find out now!</li>
-     <li>You have 7 Lives initially</li>
+     <li>You have 9 Lives initially</li>
      <li>Shooting at dead centre gives you 50 points, the next circle gives you 20 and the last one 10 points</li>
      <li>Watch out for the brick, that means a penalty of 40 points</li>
      <li>The 3 gives you three extra lives</li>
@@ -168,13 +168,11 @@
     var startGame;
     var bowLength = 75;
     var bowIncrement = 3;
-    var target = new Array();
-    var score = new Array();
     var circle_one = 50;
     var circle_two = 20;
     var circle_three = 10;
     var gameLivesMin = 9;
-    var shotArrow
+    var shotArrow;
     var leadingPointY;
     var obstructionX;
     var obstructionY;
@@ -199,7 +197,7 @@
     obstruction_2.src = "http://img09.deviantart.net/80c6/i/2011/312/b/d/ice_sword_by_thecarloszayas-d4fjb49.png";
     obstruction_3.src = "http://www.panel2panel.com/wp-content/uploads/2014/03/animal-number-three-md.png";
 
-       function sound(src) {
+       function sound(src) {//to enable sound in the background
      this.sound = document.createElement("audio");
      this.sound.src = src;
      this.sound.setAttribute("preload", "auto");
@@ -263,40 +261,38 @@
          
          y += dy;//constantly move the target
          if( y+dy > 460 || y+dy<75 ){//make sure the target does not move out of bounds
-           dy = -dy;
-          }
+             dy = -dy;
+           }
          document.addEventListener("keydown",keyDownHandler,false);
          document.addEventListener("keyup",keyUpHandler,false);
     
-      function keyUpHandler(e){
-          if(e.keyCode== 32){//32 for spaceBar
-            spaceBarPressed = false;
-             
-          }
-          if(e.keyCode==40){
-            downPressed = false;
-          }
-          if(e.keyCode == 38){
-            upPressed = false;
-          }
-        }
+         function keyUpHandler(e){
+            if(e.keyCode== 32){//32 for spaceBar
+               spaceBarPressed = false;
+               }
+            if(e.keyCode==40){
+               downPressed = false;
+               }
+           if(e.keyCode == 38){
+               upPressed = false;
+               }
+           }
           
-      function keyDownHandler(e){
+         function keyDownHandler(e){
 
     	    if(e.keyCode == 32){
-    		    spaceBarPressed = true;
+    	     spaceBarPressed = true;
             //gameCount++;
-            arrowStart = 30;
-      
+             arrowStart = 30;
     	     }
 
-          if(e.keyCode==40){
-            downPressed = true;
-          }
+            if(e.keyCode==40){
+              downPressed = true;
+             }
 
-          if(e.keyCode == 38){
-            upPressed = true;
-          }
+            if(e.keyCode == 38){
+              upPressed = true;
+             }
 
          }       
 
@@ -309,22 +305,20 @@
          }
 
         if(spaceBarPressed){    
-
-         //   shotArrow = setInterval(shootArrow,1000);
         requestAnimationFrame(shootArrow);
        }     
     
 
        oppY+=dyopp;
        if(oppY>canvas.height-30||oppY<30){
-         dyopp = -dyopp;
-       }
+           dyopp = -dyopp;
+         }
 
-        }
+      }
  
         function drawArrow(){
 
-     	    ctx.beginPath();
+     	  ctx.beginPath();
           ctx.font = "30px Arial";
           ctx.strokeStyle = "#00FF00"
           ctx.moveTo(arrowStart,arrowY);
@@ -332,12 +326,12 @@
           ctx.stroke();
           ctx.closePath();
           if(arrowStart>=200){
-          oppositionColliosion();//to check for obstacle colliosion
-        }
+             oppositionColliosion();//to check for obstacle colliosion
+           }
           leadingPointY = arrowY;          
           if(arrowStart == 30 ){
               gameCount++;//incrementing the lives used
-          }  
+           }  
           if(arrowStart==480){
             targetHitting();//checking for colliosion between target and arrow
               
@@ -371,46 +365,42 @@
       }
 
         function drawBox(){
-          ctx.strokeStyle = "#7a8089";
-          ctx.font = "30px Arial";
-          ctx.shadowBlur=20;
-          ctx.shadowColor="white";
-          ctx.strokeRect(0,0,600,600);
-          ctx.stroke();
-
+            ctx.strokeStyle = "#7a8089";
+            ctx.font = "30px Arial";
+            ctx.shadowBlur=20;
+            ctx.shadowColor="white";
+            ctx.strokeRect(0,0,600,600);
+            ctx.stroke();
       }
 
 
         function drawBow(){
 
-         ctx.beginPath();//draw the arrow part
-         ctx.font = "30px Arial";
-         ctx.strokeStyle = "#704205";
-         ctx.shadowBlur = 0;
-         ctx.moveTo(50,arrowY);
-         ctx.lineTo(125,arrowY);
-         ctx.stroke();
-         ctx.closePath(); 
+            ctx.beginPath();//draw the arrow part
+            ctx.font = "30px Arial";
+            ctx.strokeStyle = "#704205";
+            ctx.shadowBlur = 0;
+            ctx.moveTo(50,arrowY);
+            ctx.lineTo(125,arrowY);
+            ctx.stroke();
+            ctx.closePath(); 
+   
+            ctx.beginPath();//draws the bow stem
+            ctx.font = "30px Arial";
+            ctx.strokeStyle = "#4f300e";
+            ctx.shadowBlur = 0;
+            ctx.moveTo(50,arrowY-bowLength);
+            ctx.lineTo(50,arrowY+bowLength);
+            ctx.stroke();
+            ctx.closePath();  
 
-         ctx.beginPath();//draws the bow stem
-         ctx.font = "30px Arial";
-         ctx.strokeStyle = "#4f300e";
-         ctx.shadowBlur = 0;
-         ctx.moveTo(50,arrowY-bowLength);
-         ctx.lineTo(50,arrowY+bowLength);
-         ctx.stroke();
-         ctx.closePath();  
-
-         ctx.beginPath();//draws the arc
-         ctx.font = "30px Arial";
-         ctx.strokeStyle = "#4f300e";
-         ctx.shadowBlur = 0;
-         ctx.arc(50,arrowY, 75, -.5*Math.PI, -1.5*Math.PI);
-         ctx.stroke();
-         ctx.closePath();  
-
-
-
+            ctx.beginPath();//draws the arc
+            ctx.font = "30px Arial";
+            ctx.strokeStyle = "#4f300e";
+            ctx.shadowBlur = 0;
+            ctx.arc(50,arrowY, 75, -.5*Math.PI, -1.5*Math.PI);
+            ctx.stroke();
+            ctx.closePath(); 
 
       }
 
@@ -568,9 +558,8 @@
         gameSound.play();
       });
       $("#easy").on("click",function(){
-
-         window.location='Bow and arrow__2.html';
-        
+	      alert("good luck!!");
+         window.location='Bow and arrow__2.html';        
       });
      
 
