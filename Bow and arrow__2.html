@@ -160,7 +160,7 @@
      var dyopp = -1;
      var revX = 365;
      var revY = 150;
-     var status = true;
+     var sound_status = true;
      var getCurrentTime; 
 	   
      
@@ -495,17 +495,17 @@
 
       $("#start").click(function(){
         startGame = setInterval(movingTarget,20);
-	 if(status){
+	 if(sound_status){
         gameSound.play();
 	   }
       });
       $("#mute").click(function(){
-        status = false;	      
+        sound_status = false;	      
         gameSound.stop();
       });
 	   
       $("#mute").dblclick(function(){
-        status = true;	      
+        sound_status = true;	      
         gameSound.start();
       });	   
 	   
@@ -521,7 +521,7 @@
       $("#pause").dblclick(function(){
         startGame = setInterval(movingTarget,20);
         shotArrow = setInterval(shootArrow,1000);
-        if(status){
+        if(sound_status){
         gameSound.play();
 	   }
 
