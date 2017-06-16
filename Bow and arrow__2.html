@@ -111,7 +111,10 @@
   <div class = "page-header">
     <button id = "start"class = "depth">Start</button>
     <button id = "pause"class = "depth">Pause</button>
-    <button id = "stop"class = "depth">Stop</button>
+    <button id = "stop"class = "depth">Stop</button> 
+    <button id = "mute"class = "depth">Mute</button>
+	  
+	  
   </div>
    <canvas id = "canvas" width = "600" height = "500"></canvas>
    
@@ -157,7 +160,9 @@
      var dyopp = -1;
      var revX = 365;
      var revY = 150;
+     var status = true;
      var getCurrentTime; 
+	   
      
      bullseyePic.src = "https://pbs.twimg.com/profile_images/598218580820299776/riyOfMzy.png";
      obstruction.src = "http://pre03.deviantart.net/536b/th/pre/i/2010/301/2/6/bullseye_by_himanuts-d31pc8v.png";
@@ -490,8 +495,20 @@
 
       $("#start").click(function(){
         startGame = setInterval(movingTarget,20);
+	 if(status){
         gameSound.play();
+	   }
       });
+      $("#mute").click(function(){
+        status = false;	      
+        gameSound.stop();
+      });
+	   
+      $("#mute").dblclick(function(){
+        status = true;	      
+        gameSound.start();
+      });	   
+	   
 
       $("#pause").click(function(){
         clearInterval(startGame);
@@ -504,7 +521,9 @@
       $("#pause").dblclick(function(){
         startGame = setInterval(movingTarget,20);
         shotArrow = setInterval(shootArrow,1000);
+        if(status){
         gameSound.play();
+	   }
 
       });
 
