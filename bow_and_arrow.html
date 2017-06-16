@@ -118,6 +118,8 @@
           <button id = "stop" class = "depth">Stop</button>
           <button id = "pause" class = "depth">Pause</button>
           <button id = "easy" class = "depth">Hard</button>
+	  <button id = "mute" class = "depth">Mute</button>
+
    
   </div>
   
@@ -185,6 +187,7 @@
     var dyopp = -1;
     var revX = 365;
     var revY = 150;
+    var sound_status = true;
   
         
     
@@ -541,7 +544,9 @@
 
       $("#start").on("click",function(){
         startGame = setInterval(movingTarget,20);
+	      if(sound_status){
         gameSound.play();
+	      }
         $("body").css("background-image","url(http://www.twicecircled.com/resources/blog/2013/03/starmap/finished.png)");
         $("#intro").hide();
       
@@ -553,11 +558,22 @@
         clearInterval(shotArrow);  
         gameSound.stop();    
       });
+	   
+           $("#mute").on("click",function(){
+        sound_status = false;
+        gameSound.stop();    
+      });	
+	   $("#mute").on("dblclick",function(){
+        sound_status = true;
+        gameSound.play();    
+      });	   
 
       $("#pause").on("dblclick",function(){
         startGame = setInterval(movingTarget,20);
         shotArrow = setInterval(shootArrow,1000);
+	      if(sound_status){
         gameSound.play();
+	      }
       });
       $("#easy").on("click",function(){
 	      alert("good luck!!");
