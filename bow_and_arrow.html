@@ -215,7 +215,9 @@
      }
    }
    var gameSound;
+   var bowSound;	   
    gameSound = new sound("https://sampleswap.org/mp3/artist/2/canton_Lewd-Day-160.mp3");
+   bowSound = new sound("Gun+Silencer.mp3");	   
 
     
 
@@ -286,6 +288,7 @@
     	    if(e.keyCode == 32){
     	     spaceBarPressed = true;
             //gameCount++;
+             bowSound.play();
              arrowStart = 30;
     	     }
 
