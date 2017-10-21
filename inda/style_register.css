@@ -10,8 +10,9 @@ body{
 	width: 97%;
 	margin-bottom: 150px;
 	margin-left: 1.5%;
-	padding-bottom: 30px;
 	padding-top: 20px;
+	padding-bottom: 30px;
+	padding-left: 20px;
 
 
 	/*background-color: #edeeef;*/
@@ -97,4 +98,8 @@ table, th,td {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border: 2px solid black;
+}
+
+#table_rates{
+	margin-left: 20px;
 }

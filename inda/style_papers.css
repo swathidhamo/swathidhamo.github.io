@@ -1,3 +1,4 @@
+
 #bar{
   padding-top: 50px;
   padding-left: 15px;
@@ -5,9 +6,9 @@
 }
 
 #menu{
-	padding-top: 20px;
+	padding-top: 7px;
 	padding-left: 20px;
-	padding-bottom: 50px;
+	padding-bottom: 20px;
 }
 
 .content{
@@ -19,19 +20,33 @@
 body{
 	background-color: #b2b9c4;
 }
+h4{
+	margin-left: 6px;
+
+}
 
 #overall{
-	margin-left: 20px;
+	/*margin-left: 20px;
 	margin-right: 15px;
-	/*margin-bottom: 150px;*/
-	margin-bottom: 20px;
-	margin-top: 50px;
+
+	*/
+	width: 97%;
+	margin-bottom: 150px;
+	margin-left: 1.5%;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	
+
+
 	background-color: #edeeef;
 }
-#footer{
-	background-color: #475f77;
-	padding-top-top: 30px;
+img{
+	width: 100%;
 
+}
+#footer{
+	background-color: #4589a8;
+	padding-top-top: 30px;
 	text-align: center;
 }
 #plag{
