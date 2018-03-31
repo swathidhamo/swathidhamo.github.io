@@ -44,7 +44,7 @@
 .flip-container, .front, .back {
 	width: 450px;
 	height: 300px;
-}
+	}
 
 .flipper {
 	-webkit-transition: 0.6s;
@@ -74,7 +74,7 @@
 }
 
 .front {
-	background: url(http://davidwalsh.name/demo/dwflip.jpg) 0 0 no-repeat;
+	
 	z-index: 2;
 }
 
@@ -100,10 +100,6 @@
 	position: absolute;
 	text-shadow: 0.1em 0.1em 0.05em #333;
 
-	-webkit-transform: rotate(-20deg);
-	-moz-transform: rotate(-20deg);
-  -o-transform: rotate(-20deg);
-	transform: rotate(-20deg);
 }
 
 .back-logo {
@@ -112,8 +108,7 @@
 	left: 90px;
 	width: 160px;
 	height: 117px;
-	background: url(http://davidwalsh.name/demo/logo.png) 0 0 no-repeat;
-}
+	}
 
 .back-title {
 	font-weight: bold;
